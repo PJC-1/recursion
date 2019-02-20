@@ -8,7 +8,7 @@ var reverseString = function(s) {
     if (s === "") {
         return "";
     } else {
-        return reverse(s.substr(1)) + s.charAt(0);
+        return reverseString(s.substr(1)) + s.charAt(0);
     }
 }
 //returns "olleh"
