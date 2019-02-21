@@ -16,21 +16,22 @@
 // Input: ["H","a","n","n","a","h"]
 // Output: ["h","a","n","n","a","H"]
 
-
-class Solution {
-    public void reverseString(char[] s) {
-      helper(0, s.length - 1, s);
-    }
-
-    private void helper(int start, int end, char [] s) {
-      if (start >= end) {
-        return;
-      }
-      // swap between the first and the last elements.
-      char tmp = s[start];
-      s[start] = s[end];
-      s[end] = tmp;
-
-      helper(start + 1, end - 1, s);
-   }
+function reverseString(s) {
+  helper(0, s.length - 1, s);
 }
+
+function helper(start, end, s) {
+  if(start >= end) {
+    console.log(s);
+    return;
+  }
+
+  var tmp = s[start];
+  s[start] = s[end];
+  s[end] = tmp;
+
+  helper(start + 1, end - 1, s);
+}
+
+// [ 'o', 'l', 'l', 'e', 'h' ]
+reverseString(["h","e","l","l","o"]);
