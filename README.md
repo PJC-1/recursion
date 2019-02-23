@@ -99,4 +99,17 @@ function helper(start, end, arr) {
 reverseString(['h','e','l','l','o']);
  ```
 
+ **ILLUSTRATING HOW THE ALGORITHM WORKS**:
+ Given the input string `["h", "e", "l", "l", "o"]`.
+ 1.	*Problem*: deal with a string `"hello"`.
+	 Swap and move pointers `"h"` (*start*) and `"o"` (*end*).
+	 `["h", "e", "l", "l", "o"]`
+	 `["o", "e", "l", "l", "h"]`
+ 2.	*Subproblem*: deal with a string `"ell"`.
+	 Swap and move pointers `"e"` (*start*) and `"l"` (*end*).
+ 	 `["o", "e", "l", "l", "h"]`
+ 	 `["o", "l", "l", "e", "h"]`
+  3.    *Subproblem*: deal with a string `"l"`
+	 start = end --> base case.
+
  *NOTE*: You can see, we only need a constant memory in each recursive call in order to swap the leading and trailing characters, which meets the constraint.
