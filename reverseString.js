@@ -17,21 +17,31 @@
 // Output: ["h","a","n","n","a","H"]
 
 function reverseString(s) {
-  helper(0, s.length - 1, s);
+    // call helper function, with parameters starting from the begining of the array and ending at the last element
+    helper(0, s.length - 1, s);
 }
 
-function helper(start, end, s) {
-  if(start >= end) {
-    console.log(s);
-    return;
-  }
+// helper function that will reverse the elements of the passed in array
+function helper(start, end, arr) {
+    // exit condition
+    if(start >= end) {
+        // logging the arr to the console
+        console.log(arr);
+        // exit the function
+        return;
+    }
 
-  var tmp = s[start];
-  s[start] = s[end];
-  s[end] = tmp;
+    // switch the first position with the last posision
+    // cache the start position's value into a storage variable
+    var temp = arr[start];
+    // set the start position to the end position's value
+    arr[start] = arr[end];
+    // set the end position to the temp's value
+    arr[end] = temp;
 
-  helper(start + 1, end - 1, s);
+    // call helper function with incremented start value and decremented end value
+    helper(start + 1, end - 1, arr);
 }
 
-// [ 'o', 'l', 'l', 'e', 'h' ]
-reverseString(["h","e","l","l","o"]);
+// outputs [ 'o', 'l', 'l', 'e', 'h' ]
+reverseString(['h','e','l','l','o']);
