@@ -116,7 +116,7 @@ reverseString(['h','e','l','l','o']);
 
 
 
-A Principle of Recursion
+A Recursion Function
 -------------
 > For a problem, if there exists a *recursive solution*, we can follow the guidelines below to implement it.
 >
